@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numero = 10;
+        const texto = "Texto";
+        // ARRAY
+        const lista = ["Ana", "Maria", 10, true];
+
+        // OBJETOS
+        const objeto_vazio = {};
+        const pessoa = {
+            nome: "Ana",
+            idade: 27,
+            data_nascimento: "01/01/1996",
+            sexo: "F",
+            e_casada: true,
+            dependentes: ["João", "Maria"],
+            correr: function() {
+                console.log("Correr");
+            },
+            dormir: function() {
+                console.log("Dormir");
+            }
+        };
+
+        const data_nascimento = prompt("QUal a Data de Nascimento");
+        pessoa.data_nascimento = data_nascimento;
+
+        function exibirMensagemBoasVindas(pessoaQualquer) {
+            if(pessoaQualquer.sexo === 'M') {
+                document.write("Olá Dr. " + pessoaQualquer.nome);
+            } else {
+                document.write("Olá Dra. " + pessoaQualquer.nome);
+            }
+            pessoaQualquer.nome = "Maria";
+        }
+
+        exibirMensagemBoasVindas(pessoa)
+
+        console.log(pessoa);
+        console.log(pessoa.nome)
+        console.log(pessoa.dependentes)
+        pessoa.correr();
+
+    </script>
+</body>
+</html>

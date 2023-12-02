@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Teste 1</button>
+    <button id="btn">Teste 2</button>
+
+    <p class="texto">Texto 1</p>
+    <p class="texto">Texto 1</p>
+    <p class="texto">Texto 1</p>
+    <script>
+        // console.log(window)
+        // const body = document.querySelector("body");
+        // body.style.background = "red";
+        const btn = document.getElementById("btn");
+        console.log(btn);
+
+        const btns = document.querySelectorAll('#btn');
+        console.log(btns);
+
+        const paragrafos = document.getElementsByClassName('texto');
+        console.log(paragrafos[0])
+        console.log(paragrafos);
+
+        class Pessoa {
+            nome = '';
+            cpf = '';
+            constructor(nome, cpf) {
+                this.nome = nome;
+                this.cpf = cpf;
+            }
+        };
+
+        const pessoas = [];
+        const pessoa1 = new Pessoa("Ana", "12345678");
+        const pessoa2 = new Pessoa("Jose", "12345678");
+
+        pessoas.push(pessoa1);
+        pessoas.push(pessoa2);
+        console.log(pessoas);
+        
+        function lerPosicao(item, indice) {
+            console.log("Item", item);
+            console.log(item.nome)
+        }
+        pessoas.map(lerPosicao)  
+
+    </script>
+</body>
+</html>

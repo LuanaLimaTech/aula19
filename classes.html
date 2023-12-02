@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // CLASSES
+        // const pessoa1 = {
+        //     nome: "Maria",
+        //     cpf: "000015488",
+        //     data_nascimento: "1990-07-10"
+        // };
+        // const pessoa2 = {
+        //     nome: "Ana",
+        //     cpf: "000015488",
+        //     data_nascimento: "1990-07-10"
+        // };
+        // const pessoa3 = {
+        //     nome: "Ana",
+        //     cpf: "000015488",
+        //     data_nascimento: "1990-07-10",
+        //     correr: function() {
+        //         cosole.log("Correr")
+        //     }
+        // };
+
+        class Pessoa {
+            // ATRIBUTOS - CONHECIDOS COMO VARIAVEIS DE CLASSE
+            nome = '';
+            cpf = '';
+            data_nascimento = '';
+            // CONSTRUTOR - constructor - FUNCAO
+            // PARAMETROS - VARIAVEIS DE FUNCOES
+            constructor(nome, cpf, data_nascimento) {
+                // PARA CHAMAR UMA VARIAVEL DE CLASSE EU UTILIZO O this. na frente da variavel
+                this.nome = nome;
+                this.cpf = cpf;
+                this.data_nascimento = data_nascimento;
+            }
+            correr() {
+                console.log("Correr");
+            }
+            exibirNome() {
+                console.log(this.nome)
+            }
+        }
+
+        let pessoa = new Pessoa("Luana", "123456789", "1988-10-10");
+        pessoa.correr();
+        pessoa.exibirNome();
+
+        let pessoa2 = new Pessoa("João", "987654321", "2000-10-10");
+        pessoa2.correr();
+        pessoa2.exibirNome();
+
+        pessoa = pessoa2;
+        pessoa.exibirNome();
+
+
+        // EXERCICIO
+        // CRIE UMA CLASSE CARRO COM SEUS ATRIBUTOS: marca, modelo, cor
+        // OS EVENTOS E METODOS DA CLASSE SÃO AS FUNCOES
+        // CRIE UM CONSTRUCTOR QUE RECEBA marca, modelo e cor do veiculo;
+        // INSTANCIE A CLASSE PARA UMA VARIAVEL carro e exiba a marca do carro
+        // e cor.
+    </script>
+</body>
+</html>
