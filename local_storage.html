@@ -6,10 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-   
-    
     <script>
-        
+        // ARMAZENAR VALORES DENTRO DO NAVEGADOR SEM APAGAR.
+
+
+        function mudaBackground() {
+            let n1 = Math.floor(Math.random(100) * 100);
+            let n2 = Math.floor(Math.random(100) * 100);
+            let n3 = Math.floor(Math.random(100) * 100);
+
+            console.log(n1, n2, n3)
+
+            const body = document.querySelector("body");
+            body.style.background = '#' + n1 + n2 + n3;
+
+        }
+
+        setInterval(mudaBackground, 250);
+
+      
+
     </script>
 </body>
 </html>
